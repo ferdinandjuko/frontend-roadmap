@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM-manip Javascript</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<nav>
+			<h1>DOM-manip <span>Javascript</span></h1>
+		</nav>
+		<div id="cursor"></div>
+		<section>
+			<div class="box">
+				<div class="box--info">
+					<span>~ FEATURES ~</span>
+					<p>selectors</p>
+					<p>listener</p>
+					<p>click</p>
+					<p>innerHTML</p>
+					<p>injectCLASS</p>
+				</div>
+				<p>Voici une question ?</p>
+				<button id="btn-1">Reponse 1</button>
+				<button id="btn-2">Reponse 2</button>
+				<p id="rep"></p>
+			</div>
+		</section>
+		<section>
+			<div class="box key-box">
+				<div class="box--info">
+					<span>~ FEATURES ~</span>
+					<p>keypress</p>
+					<p>audio</p>
+				</div>
+				<p>Appuyez sur une touche</p>
+				<span id="key-press"></span>
+			</div>
+		</section>
+		<section>
+			<form action="" class="box">
+				<div class="box--info">
+					<span>~ FEATURES ~</span>
+					<p>input</p>
+					<p>FORM validation</p>
+				</div>
+				<h4>Choisissez la bonne reponse :</h4>
+				<input type="checkbox" id="check1" />
+				<label for="check1">A</label>
+				<br />
+				<input type="checkbox" id="check2" />
+				<label for="check2">B</label>
+				<br />
+				<input type="checkbox" id="check3" />
+				<label for="check3">C</label>
+				<br />
+				<select id="option">
+					<option value="default">Par defaut</option>
+					<option value="true">Oui</option>
+					<option value="false">Non</option>
+				</select>
+				<br /><br />
+				<input type="text" id="pseudo" required />
+				<br />
+				<label for="pseudo">Entrer votre nom pour valider les reponses</label>
+				<br /><br />
+				<input type="submit" value="valider" />
+				<br />
+				<div id="output"></div>
+			</form>
+		</section>
+		<section>
+			<div class="box">
+				<div class="box--info">
+					<span>~ FEATURES ~</span>
+					<p>forEACH</p>
+				</div>
+				<p>Cliquez sur chaque box</p>
+				<div class="box--mini"></div>
+				<div class="box--mini"></div>
+				<div class="box--mini"></div>
+			</div>
+		</section>
+		<section id="generated"></section>
+		<script src="./app.js"></script>
+	</body>
+</html>
