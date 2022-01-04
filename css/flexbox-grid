@@ -1,0 +1,44 @@
+=> [FLEXBOX]----------------------
+
+ #description
+ - module specifique au CSS pour la mise en page unidimensionnelle (ne gère pas en même temps les lignes et les colonnes, mais qu’une seule direction à la fois)
+ 
+ #avantage
+ - il s’adapte automatiquement à toutes les tailles d’écran via la propriété flex-wrap: wrap (éléments restera fluide et adaptative - responsive)
+ 
+ #unitE de mesure
+ - le pixel (px) est l’unité de mesure la plus utilisée pour tout ce qui concerne les tailles d’éléments destinés à rester fixe.
+ - le pourcentage (%): permet de s'adapter proportionnellement a son element parent
+
+ #proprietE
+ - les propriétés permettant d’agencer les éléments grâce à flexbox sont : 
+ 	flex-direction: row pour avoir une ligne 
+ 	flex-direction: column pour avoir une colonne
+ 
+ #but | utilitE
+ - toujours laisser le contenu décider de la place qu’il prend et de la disposition qu’il aura afin de toujours remplir au maximum l’espace disponible à l’écran (mais seulement en 2 directions [row|column])
+ 
+=> [GRID]----------------------
+
+ #description
+ - module CSS qui permet une mise en page bidirectionnelle (lignes et colonnes)
+ - calquEe sur le meme fonctionnement que les tableaux mais de structure variEe
+ 
+ #avantage
+ - peut etre utilisE soit pour une mise en page entiere soit pour gerer une partie de mise en page
+ 
+ #unitE de mesure
+ - le pixel (px) est l’unité de mesure la plus utilisée pour tout ce qui concerne les tailles d’éléments destinés à rester fixe.
+ - le pourcentage (%): permet de s'adapter proportionnellement a son element parent
+ - fractionnaire (fr): unitE developpE exclusivement pour ce module, elle s'adapte a l'espace disponible sans tenir compte des elements qui sont fixes
+
+ #but | utilitE
+ - pouvoir gerer une mise en page plus/moins complexe
+ 
+ => [flexVSgrid]----------------------
+ 
+- Grid vs Flexbox, quelle que soit le problématique, Grid n’a pas pour vocation à remplacer Flexbox. En faite, les deux peuvent être complémentaires et on peut très bien combiner ces deux modules dans un même projet. Ne vous limitez pas à une solution et exploitez les avantages de chacun, cela facilitera votre développement et tous vos placements !
+
+- On peut utiliser Flexbox dans le Grid, mais pas l’inverse !
+
+- Le seul moyen pour Flexbox de faire en sorte que deux éléments se superposent est d’utiliser des marges négatives. Ce qui n'est pas très recommandée, surtout lorsque l’on peut utiliser le grid qui est bien meilleur pour réaliser cela. 
