@@ -1,0 +1,63 @@
+@mixin insideBox {
+	background-color: rgba(255, 255, 255, 0.561);
+	border-radius: 5px;
+	width: 7rem;
+	height: 7rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.box {
+	background-color: #444;
+	color: #eee;
+	padding: 2%;
+	text-align: center;
+	margin: 5%;
+	border-radius: 10px;
+	transition: 0.5s ease;
+
+	&--classic {
+		@include insideBox;
+	}
+
+	&--colored {
+		@include insideBox;
+	}
+
+	&--true {
+		background-color: aquamarine;
+		color: #555;
+	}
+
+	&--false {
+		background-color: rgb(255, 107, 53);
+	}
+
+	&--hover {
+		border: solid 2px rgb(255, 255, 232);
+		transition: 0.2s;
+	}
+
+	&--info {
+		border: dashed 3px yellow;
+		margin-left: 25%;
+		margin-right: 25%;
+		padding-top: 10px;
+		color: rgb(255, 255, 100);
+		background-color: rgba(255, 255, 0, 0.144);
+
+		span {
+			font-size: larger;
+		}
+
+		p {
+			font-size: small;
+		}
+	}
+}
+
+.box--colored p,
+p + .box--colored p {
+	position: relative;
+	top: 20px;
+}

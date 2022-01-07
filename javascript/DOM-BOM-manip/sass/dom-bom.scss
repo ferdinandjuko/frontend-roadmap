@@ -1,0 +1,64 @@
+/*================* DOM style (begin) ================*/
+#rep {
+	font-size: 0px;
+}
+
+#cursor {
+	height: 40px;
+	width: 40px;
+	border: dashed 1px yellow;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 122, 0.096);
+	position: absolute;
+	transition: 0.2s ease;
+	transform: translate(
+		-50%,
+		-50%
+	); /* pour centrer le nouveau curseur par rapport au pointeur */
+	z-index: -1; /* pour passer le curseur au dessous des autres elements */
+}
+
+#key-press {
+	font-size: 30px;
+	transition: 1s;
+}
+
+.output--info {
+	border: dashed 1px rgb(149, 225, 255);
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 10px;
+	padding-top: 8px;
+	color: rgb(140, 222, 255);
+	background-color: rgba(100, 211, 255, 0.253);
+	transition: 1s;
+}
+
+#priority-box {
+	width: 200px;
+	height: 200px;
+}
+
+#priority-value {
+	font-size: 28px;
+	font-weight: bolder;
+	position: relative;
+	top: 72px;
+	cursor: pointer;
+}
+
+#propag {
+	width: 150px;
+	height: 150px;
+	font-size: 20px;
+}
+/*================* DOM style (end) ================*/
+/*================* BOM style (begin) ================*/
+#innerHW {
+	h4 {
+		position: relative;
+		top: 22px;
+	}
+}
+
+/*================* BOM style (end) ================*/

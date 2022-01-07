@@ -1,0 +1,32 @@
+//typography
+* {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	background-color: #999;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	top: -100px;
+	padding: 10px;
+	margin-left: -10px;
+	background-color: rgba(89, 150, 200, 0.774);
+	transition: 0.5s;
+
+	h1 {
+		font-size: 25px;
+		justify-content: space-around;
+		color: #fff;
+	}
+
+	span {
+		color: yellow;
+	}
+}
+
+.space {
+	margin-top: 100px;
+}
