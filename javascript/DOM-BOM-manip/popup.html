@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>popup - demo</title>
+	</head>
+	<body>
+		<style>
+			* {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				text-align: center;
+				background-color: #444;
+			}
+
+			h2 {
+				margin-top: 100px;
+				color: #eee;
+			}
+
+			#box-form {
+				border: solid 5px rgb(235, 220, 16);
+				border-radius: 10px;
+				background-color: #444;
+				padding: 30px;
+				color: #eee;
+				width: 50%;
+				margin: auto;
+			}
+
+			label {
+				display: inline;
+				font-weight: bolder;
+			}
+
+			input {
+				border-radius: 10px;
+				color: #eee;
+			}
+
+			#form-submit {
+				width: 100px;
+				height: 50px;
+				font-weight: bolder;
+				border-radius: 10px;
+				color: #eee;
+			}
+
+			#form-submit:hover {
+				background-color: rgb(235, 220, 16);
+				color: #333;
+			}
+
+			p {
+				color: #888;
+			}
+		</style>
+		<h2>popup - demo</h2>
+		<form id="box-form" action="">
+			<label for="Name">Pseudo </label>
+			<input type="text" required />
+			<br /><br />
+			<label for="Age">Age </label>
+			<input type="number" min="18" max="80" required />
+			<br /><br />
+			<button id="form-submit" type="submit">VALIDER</button>
+		</form>
+		<p>
+			Message: Cette fenetre devrai etre fermeE lorsque vous validez le
+			formulaire
+		</p>
+		<script>
+			const formSubmit = document.getElementById('form-submit');
+
+			//generateur de code en entier de N taille
+			function codeGenerator(codeLength) {
+				let stocks = [];
+				let code = '';
+				let count = 0;
+
+				while (count < codeLength) {
+					stocks.push(Math.floor(Math.random() * 9));
+					count++;
+				}
+
+				stocks.forEach(stock => {
+					code += stock; //concat stocks values in code
+				});
+
+				code = parseInt(code); //convert code to int
+
+				return code;
+			}
+
+			formSubmit.addEventListener('click', () => {
+				let validation = window.confirm(
+					'Vous voulez vraiment valider le formulaire ?',
+				); //return boolean
+				//code verification
+				let userEntry = window.prompt("Veuillez entrer le code generE: ");
+				if (validation === true) {
+					window.alert('Formulaire validE !');
+					window.close();
+				} else {
+					window.alert('Annulation de la validation du formulaire !');
+				}
+			});
+		</script>
+	</body>
+</html>
