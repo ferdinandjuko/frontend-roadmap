@@ -98,12 +98,20 @@
 					'Vous voulez vraiment valider le formulaire ?',
 				); //return boolean
 				//code verification
-				let userEntry = window.prompt("Veuillez entrer le code generE: ");
-				if (validation === true) {
-					window.alert('Formulaire validE !');
-					window.close();
-				} else {
-					window.alert('Annulation de la validation du formulaire !');
+				let code = codeGenerator(4);
+				if (validation) {
+					let userEntry = window.prompt(
+						'Code -> ' + code + '\nVeuillez entrer le code ci-dessus:',
+					);
+					if (userEntry == code) {
+						window.alert('Formulaire validE !');
+						window.close();
+					} else {
+						if (userEntry != code) {
+							window.alert('Code invalide !');
+						}
+						window.alert('Annulation de la validation du formulaire !');
+					}
 				}
 			});
 		</script>
