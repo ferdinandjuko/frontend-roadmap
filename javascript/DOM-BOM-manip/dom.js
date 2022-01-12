@@ -5,6 +5,7 @@
 /** CLICK **/
 /** INNERHTML **/
 /** INJECT class | style **/
+//TODO: all verified
 
 // //cible box + buttons
 const box = document.querySelector('.box');
@@ -31,6 +32,7 @@ btn2.addEventListener('click', () => {
 
 //=====================================================
 /**  MOUSE **/
+//TODO: all verified
 
 const cursor = document.getElementById('cursor');
 
@@ -59,6 +61,7 @@ window.addEventListener('click', () => {
 //=====================================================
 /** KEYPRESS **/
 /** AUDIO **/
+//TODO: all verified
 
 const keyBox = document.querySelector('.key-box');
 const keyPress = document.getElementById('key-press');
@@ -89,6 +92,7 @@ document.addEventListener('keypress', e => {
 
 //=====================================================
 /** SCROLL **/
+//TODO: all verified
 
 const nav = document.querySelector('nav');
 
@@ -105,6 +109,7 @@ document.addEventListener('scroll', () => {
 /** INPUT **/
 /** FORM validation **/
 /** prevent default **/
+//TODO: all verified
 
 const inputText = document.getElementById('pseudo');
 const inputOption = document.getElementById('option');
@@ -159,6 +164,7 @@ form.addEventListener('submit', e => {
 
 //=====================================================
 /** FOREACH **/
+//TODO: all verified
 
 //selection multiple
 const boxesColored = document.querySelectorAll('.box--colored');
@@ -184,6 +190,7 @@ boxesColored.forEach(box => {
 
 //=====================================================
 /** LOAD **/
+//TODO: all verified
 
 const sectionGen = document.getElementById('generated');
 
@@ -197,7 +204,7 @@ window.addEventListener('load', () => {
 			<span>~ FEATURES ~</span>
 		<p>load</p>
 			</div>
-			<p> Page entierement chargEe !</p>
+			<p> Page entierement chargEe ! (ce message n'etait pas affichE si la page est en chargement)</p>
 		</div>
 	`;
 
@@ -207,6 +214,7 @@ window.addEventListener('load', () => {
 //=====================================================
 /** BUBBLING **/
 /* bonus: counter function */
+//TODO: all verified
 
 const priorityBox = document.getElementById('priority-box');
 const priorityValue = document.getElementById('priority-value');
@@ -232,8 +240,10 @@ priorityBox.addEventListener(
 
 //=====================================================
 /** PROPAGATION **/
+//TODO: all verified
 
 const propag = document.getElementById('propag');
+const pValue = document.querySelector('#propag p');
 
 document.getElementById('propag-section').addEventListener('click', () => {
 	alert('OUPS ! je suis propagE !');
@@ -242,9 +252,60 @@ document.getElementById('propag-section').addEventListener('click', () => {
 propag.addEventListener('click', e => {
 	e.stopPropagation(); //focus sur l'evenement de propag seulement (essayez d'effacer cette ligne et cliquez sur l'element propag pour voir le changement)
 	alert('YES ! propagation stopE');
+	pValue.innerText = 'Cliquez en dehors de moi et voir ce qui se passe !';
 });
 
 /* 
 NOTE: il existe une autre methode permetant de supprimer l'evenement qui s'appel "removeEventListener()"
 */
 
+//=====================================================
+/** PARENTNODE **/
+/** CREATE **/
+/** INSERT (BEFORE) **/
+/** REMOVE **/
+//TODO: dynamiser la valeur de chaque box lors du suppression/ajout
+
+let removeBtn = document.querySelectorAll('#appendArea button'); //boutton suppression box
+const addBtn = document.getElementById('addBtn'); //boutton ajout box
+const appendArea = document.getElementById('appendArea'); //zone d'ajout/suppression des box
+let boxValue = 8; //valeur d'un nouveau box (dynamique)
+
+//-------------- delBox (begin) --------------------
+//TODO: verified
+//suppresion de chaque box par remove()
+
+/*
+Explication: On a creer une fonction pour la suppression de chaque box car a chaque ajout d'un nouveau box, on doit mettre a jour le "NodeList" ciblE par la variable "removeBtn" - la valeur lue dans cette variable va etre parcourue par la boucle forEach et l'ecouteur d'evenement va effectuer la suppression en identifiant le noeud parent (parentNode) du boutton clickE (btn.parentNode)
+*/
+function delBox() {
+	removeBtn.forEach(btn => {
+		btn.addEventListener('click', () => {
+			let parentBox = btn.parentNode;
+			parentBox.remove();
+		});
+	});
+}
+
+delBox(); //l'appelle de la fonction est necessaire pour les box deja presents sinon on ne peut pas les supprimEs...
+//-------------- delBox (end) --------------------
+
+//-------------- addBox (begin) --------------------
+//TODO: verified
+function addBox() {
+	//fonction qui creer un box
+	let newBox = document.createElement('div'); //generateur de box
+	newBox.className = 'box--classic box--space'; //ajouter une class pour chaque nouveau box - afin que ce dernier prend le meme caracteristique que les autres
+	newBox.innerHTML = `
+	<button>x</button>
+	<p>${boxValue++}</p>
+	`; //on injecte le boutton de suppression et sa valeur dynamique incrementE
+	appendArea.insertBefore(newBox, addBtn); //ajouter la nouvelle element "newBox" avant l'element "addBtn"
+}
+
+addBtn.addEventListener('click', () => {
+	addBox();
+	removeBtn = document.querySelectorAll('#appendArea button'); //MAJ de removeBtn pour chaque ajout de box
+	delBox(); //transmettre la nouvelle valeur de removeBtn pour la suppression
+});
+//-------------- addBox (end) --------------------
