@@ -22,7 +22,7 @@
 					<p>innerHTML</p>
 					<p>injectCLASS</p>
 				</div>
-				<p>Voici une question ?</p>
+				<p>Choisissez une reponse</p>
 				<button id="btn-1">Reponse 1</button>
 				<button id="btn-2">Reponse 2</button>
 				<p id="rep"></p>
@@ -35,7 +35,10 @@
 					<p>keypress</p>
 					<p>audio</p>
 				</div>
-				<p>Appuyez sur une touche</p>
+				<p>
+					Appuyez sur une touche, essayez d'appuyer sur le pavE numerique et
+					voir ce qui se passe...
+				</p>
 				<span id="key-press"></span>
 			</div>
 		</section>
@@ -47,7 +50,7 @@
 					<p>FORM validation</p>
 					<p>prevent default</p>
 				</div>
-				<h4>Choisissez la bonne reponse :</h4>
+				<h4>Completez cette formulaire :</h4>
 				<input type="checkbox" id="check1" />
 				<label for="check1">A</label>
 				<br />
@@ -64,8 +67,8 @@
 				</select>
 				<br /><br />
 				<input type="text" id="pseudo" required />
-				<br />
-				<label for="pseudo">Entrer votre nom pour valider les reponses</label>
+				<br /><br />
+				<label for="pseudo">Entrer votre nom pour valider</label>
 				<br /><br />
 				<input type="submit" value="valider" />
 				<br />
@@ -111,8 +114,62 @@
 					<p>removeEventListener</p>
 				</div>
 				<br />
-				<div id="propag" class="box--colored">
+				<div
+					id="propag"
+					class="box--colored"
+					style="width: 200px; padding: 20px"
+				>
 					<p>🙉<br />cliquez ici !</p>
+				</div>
+			</div>
+		</section>
+		<section id="window-manip">
+			<div class="box">
+				<div class="box--info">
+					<span>~ FEATURES (DOM) ~</span>
+					<p>parentNode</p>
+					<p>createElement</p>
+					<p>remove</p>
+					<p>insertBefore</p>
+				</div>
+				<br />
+				<div id="appendArea">
+					<h4>Ajouter/Supprimer ?</h4>
+					<div class="box--classic box--space">
+						<button>x</button>
+						<p>1</p>
+					</div>
+					<div class="box--classic box--space">
+						<button>x</button>
+						<p>2</p>
+					</div>
+					<div class="box--classic box--space">
+						<button>x</button>
+						<p>3</p>
+					</div>
+					<div class="box--classic box--space">
+						<button>x</button>
+						<p>4</p>
+					</div>
+					<div class="box--classic box--space">
+						<button>x</button>
+						<p>5</p>
+					</div>
+					<div class="box--classic box--space">
+						<button>x</button>
+						<p>6</p>
+					</div>
+					<div class="box--classic box--space">
+						<button>x</button>
+						<p>7</p>
+					</div>
+					<div
+						id="addBtn"
+						class="box--classic box--space"
+						style="background: rgba(238, 238, 238, 0.13)"
+					>
+						<p>+</p>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -128,6 +185,7 @@
 					<p>window.confirm (popup)</p>
 					<p>window.alert (popup)</p>
 					<p>window.prompt (popup)</p>
+					<p>window.onload (popup)</p>
 				</div>
 				<br />
 				<p>
@@ -136,10 +194,30 @@
 				</p>
 				<div id="innerHW" class="box--classic"></div>
 				<p>Scrollez la fenetre ! <br /></p>
-				<div id="scrollXY" class="box--classic"></div>
+				<div id="scrollXY" class="box--classic" style="width: 200px"></div>
 				<br />
 				<br />
 				<button id="popup">popup</button>
+			</div>
+		</section>
+		<section>
+			<div class="box">
+				<div class="box--info">
+					<span>~ FEATURES (BOM) ~</span>
+					<p>location.href</p>
+					<p>location.host</p>
+					<p>location.pathname</p>
+					<p>location.search</p>
+					<p>location.replace</p>
+				</div>
+				<br />
+				<div
+					class="box--classic"
+					style="width: 90%; height: 90%; padding: 10px"
+				>
+					<p id="location"></p>
+					<button>location.replace</button>
+				</div>
 			</div>
 		</section>
 		<!-- script importation -->
