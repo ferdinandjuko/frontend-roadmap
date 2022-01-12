@@ -1,0 +1,30 @@
+#setprop {
+	.box--classic {
+		p {
+			margin-top: 90px;
+			margin-left: 5px;
+			margin-right: 5px;
+			font-size: 20px;
+			font-weight: bolder;
+		}
+
+    //le probleme c'est qu'on ne peut pas cibler .box--classic::after par queryselector de javascript, la solution c'est de creer un pointeur afin de modifier la propriete css qu'on veut...
+		&::after {
+			content: '';
+			width: 100px;
+			height: 100px;
+			background: radial-gradient(circle closest-side, #eee, transparent); //lueur gradient blanc
+      transform: translate(-50%, -50%); //centrer sur le curseur
+			position: absolute; //prio 1
+			z-index: 20; //prio 2
+			opacity: 0;
+			top: var(--setTop); //valeur de top a modifier dans dom.js
+			left: var(--setLeft); //valeur de left a modifier dans dom.js
+      transition: 0.25s;
+		}
+
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+}
