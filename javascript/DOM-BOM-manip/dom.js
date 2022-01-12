@@ -309,3 +309,13 @@ addBtn.addEventListener('click', () => {
 	delBox(); //transmettre la nouvelle valeur de removeBtn pour la suppression
 });
 //-------------- addBox (end) --------------------
+
+//=====================================================
+/** SETPROPERTY **/
+
+const setpropBox = document.querySelector("#setprop .box--classic");
+
+setpropBox.addEventListener('mousemove', (e) => {
+	setpropBox.style.setProperty("--setTop", e.layerY + "px");
+	setpropBox.style.setProperty("--setLeft", e.layerX + "px");
+});
