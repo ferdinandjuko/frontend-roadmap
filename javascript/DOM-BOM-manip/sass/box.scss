@@ -61,3 +61,34 @@ p + .box--colored p {
 	position: relative;
 	top: 20px;
 }
+
+.box--space {
+	margin: 10px;
+}
+
+#addBtn {
+	position: relative;
+	top: 7px;
+	left: 18px;
+	width: 50px;
+	height: 50px;
+	border: dashed 2px #eee;
+	transition: 0.2s;
+
+	&:hover {
+		width: 55px;
+		height: 55px;
+		top: 7px;
+		left: 16px;
+
+		p {
+			color: #eee;
+		}
+	}
+
+	p {
+		position: relative;
+		top: -7px;
+		color: rgb(141, 141, 141);
+	}
+}

@@ -52,6 +52,37 @@
 	height: 150px;
 	font-size: 20px;
 }
+
+#appendArea {
+	button {
+		//close button
+		float: right;
+		background-color: rgba(255, 116, 66, 0.931);
+		border-radius: 5px;
+		font-size: 10px;
+		font-weight: bold;
+		border: 2px solid #ddd;
+		width: 30px;
+		height: 30px;
+		color: #eee;
+		transition: 0.3s;
+
+		&:hover {
+			//close button
+			background-color: rgba(207, 87, 43, 0.931);
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	p {
+		//box content
+		margin-top: 40%;
+		font-size: larger;
+		font-weight: bolder;
+	}
+}
+
 /*================* DOM style (end) ================*/
 /*================* BOM style (begin) ================*/
 #innerHW {
