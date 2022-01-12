@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
 
 //Popup (open, close, confirm, alert, prompt)
 /*
-NOTE: une partie de script de la section popup (window.close, window.confirm, window.alert, window.prompt) se trouve dans "./popup.html"
+NOTE: une partie de script de la section popup (window.close, window.confirm, window.alert, window.prompt, window.omload) se trouve dans "./popup.html"
 */
 
 const popupBtn = document.getElementById('popup');
@@ -42,4 +42,24 @@ popupBtn.addEventListener('click', () => {
 		'Formulaire - popup',
 		'height=500px, width=500px',
 	);
+});
+
+//location (href, host. pathname, search, replace)
+const locationId = document.getElementById('location');
+const locationBtn = document.querySelector('#location + button');
+
+let locationHref = location.href;
+let locationHost = location.host;
+let locationPath = location.pathname;
+let locationSearch = location.search; //https://mon-site.com/?name=raja => location.search = raja
+
+locationId.innerHTML = `
+<strong>location.href</strong> = ${locationHref}; <br><br>
+<strong>location.host</strong> = ${locationHost}; <br><br>
+<strong>location.pathname</strong> = ${locationPath}; <br><br>
+<strong>location.search</strong> = ${locationSearch}; <br>
+`;
+
+locationBtn.addEventListener('click', () => {
+	location.replace('./popup.html'); //ceci remplace la location par defaut
 });
