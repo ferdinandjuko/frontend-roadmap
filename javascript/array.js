@@ -3,8 +3,9 @@ let color = []; //tableau vide
 let car = ['ford', 'peugeot', 'ferrari', 'bmw', 'audi']; //tableau avec des elements
 
 /* Acceder a leurs valeurs */
-console.log(car[0]);
-console.log(car[2]);
+console.log(car[0]); //ford
+console.log(car[2]); //ferrari
+console.log(car[0][2]); //r (fo[r]d)
 
 /* Comptage d'element */
 let totalCar = car.length;
@@ -35,3 +36,13 @@ console.log(fruit.length); //6
 /* BONUS */
 //random [0;X-1] => syntax: Math.random()*X
 console.log(Math.floor(Math.random() * 5)); //[0;4]
+
+//methode pour supprimer un element specifique dans un array
+function arrayRemove(arrayConcern, value) {
+	return arrayConcern.filter(function (element) {
+		return element != value;
+	});
+}
+let array = [1, 1, 2, 3, 'Rakoto'];
+let newArray = arrayRemove(array, 'Rakoto');
+console.log(newArray);
