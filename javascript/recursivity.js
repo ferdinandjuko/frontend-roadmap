@@ -2,6 +2,7 @@
 Une fonction récursive est une fonction qui s'appelle elle-même d'une façon ou d'une autre.
 */
 
+//definition des nombres
 let numbers = [5, 6, 0, 1, 124, 77, 978, 999, 200, 14];
 
 //sort numbers
@@ -20,19 +21,20 @@ sortNumbers = array => {
 	return array;
 };
 
+//fonction qui affiche les elements d'un array en argument
 showArray = array => {
 	array.forEach(element => {
 		console.log(element + ' ');
 	});
 };
 
-//test area (begin)
+//test
 numbers = sortNumbers(numbers);
 let lastIndex = numbers.length - 1;
-let input = 77;
+let input = 77; //l'element a rechercher
 showArray(numbers);
-//test area (end)
 
+//La fonction récursive binarySearch effectue une recherche d'un element dans un array
 binarySearch = (array, target, start, end) => {
 	//base code
 	if (start > end) {
