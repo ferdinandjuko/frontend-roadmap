@@ -1,0 +1,28 @@
+{
+	"name": "frontend-roadmap",
+	"version": "1.0.0",
+	"description": "A roadmap for future frontend developers",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RajaRakoto/frontend-roadmap.git"
+	},
+	"keywords": [
+		"frontend",
+		"roadmap",
+		"javascript",
+		"html",
+		"css",
+		"sass"
+	],
+	"author": "Raja",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/RajaRakoto/frontend-roadmap/issues"
+	},
+	"homepage": "https://github.com/RajaRakoto/frontend-roadmap#readme",
+	"type": "module"
+}
