@@ -3,7 +3,7 @@
 let firstName = 'RajA';
 let lastName = 'RakOTOnirinA';
 
-autoFormatName = (firstName, lastName) => {
+nameFormat = (firstName, lastName) => {
 	firstName =
 		firstName[0].toUpperCase() +
 		firstName.substr(1, firstName.length).toLowerCase();
@@ -11,4 +11,4 @@ autoFormatName = (firstName, lastName) => {
 	return lastName + ' ' + firstName;
 };
 
-console.log(autoFormatName(firstName, lastName)); //RAKOTONIRINA Raja
+console.log(nameFormat(firstName, lastName)); //RAKOTONIRINA Raja
