@@ -71,6 +71,7 @@ class BankAccount {
 	};
 }
 
+//calling
 let my_account = new BankAccount('Rakoto', 100);
 my_account.showBalance(); //100 ARIARY
 my_account.deposit(100); //200 ARIARY
