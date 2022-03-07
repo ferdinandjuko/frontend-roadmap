@@ -102,10 +102,13 @@ let emojis = ['😏', '😎', '😘'];
 let fruits = ['🍓', '🍐', '🍇'];
 let animals = ['🐔', '🐑', '🐝'];
 let cars = ['ford', 'peugeot', 'ferrari', 'bmw', 'audi', 'mercedes'];
+let mixtes = ['Rakoto', 24, false, [0, 8], { adresse: 'Tana' }];
 
 //*** acceder aux valeurs
 cars[0]; //ford
 cars[4][1]; //'u' -> a(u)di
+mixtes[3][1]; //8
+mixtes[4].adresse; //Tana
 
 //*** length -> longeur du tableau (compteur)
 let totalFruits = fruits.length; //3
@@ -134,11 +137,11 @@ cars[1].substr(0, 3); //peu -> (peu)geot
 //*** join -> casser un tableau en chaine et le separer par une valeur passEe en argument
 animals;
 
-//*** fonction pour supprimer un element specifique dans un array 
+//*** fonction pour supprimer un element specifique dans un array
 function arrayRemove(array, value) {
 	return array.filter(function (element) {
 		return element != value;
 	});
 }
 animals = arrayRemove(animals, '🐑');
-console.log(animals); //[ '🐔', '🐝' ]
+console.log(animals); //[ '🐔', '🐝' ];
