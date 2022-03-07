@@ -38,6 +38,8 @@ console.log(user.stacks[0]); //javascript
 console.log(users[1].pseudo); //Rabe
 console.log(users[2].email); //randria@gmail.com
 
+// ================================================================
+
 //Exemple de class pour les comptes bancaires
 class BankAccount {
 	constructor(owner, balance) {
