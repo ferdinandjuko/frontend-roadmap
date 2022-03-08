@@ -45,7 +45,7 @@ const welcome = (name: string): string => {
 	return 'Welcome ' + name + '\n';
 };
 
-console.log(welcome('Rakoto'));
+console.log(welcome('Rakoto')); //Welcome Rakoto
 
 /*
 FONCTION - exemple 2
@@ -68,4 +68,28 @@ const inscription = (
 	return 'sucess !';
 };
 
-console.log(inscription('Rakoto123', 451354, 'rakoto@hotmail.fr', true));
+console.log(inscription('Rakoto123', 451354, 'rakoto@hotmail.fr', true)); //Les newsletters seront envoyEs dans votre adresse mail rakoto@hotmail.fr
+
+/*
+ENUM & TUPLE
+*/
+
+enum account { //<= ENUM: enumeration des valeurs - ceci permet de transformer un entier en une valeur plus comprehensible
+	ADMIN, //vaut 0
+	PREMIUM, //vaut 1
+	CLASSIC, //vaut 2
+}
+
+interface Clients {
+	name: string;
+	attributes: [number, boolean | string]; //<= TUPLE: typage des valeurs possible pour un array
+	account: number;
+}
+
+const client1: Clients = {
+	name: 'Rasoa',
+	attributes: [88, true],
+	account: account.CLASSIC,
+};
+
+console.log(client1.account); //2
