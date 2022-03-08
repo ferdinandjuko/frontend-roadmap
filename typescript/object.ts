@@ -71,7 +71,7 @@ const inscription = (
 console.log(inscription('Rakoto123', 451354, 'rakoto@hotmail.fr', true)); //Les newsletters seront envoyEs dans votre adresse mail rakoto@hotmail.fr
 
 /*
-ENUM & TUPLE
+ENUM & TUPPLE
 */
 
 enum account { //<= ENUM: enumeration des valeurs - ceci permet de transformer un entier en une valeur plus comprehensible
@@ -82,7 +82,7 @@ enum account { //<= ENUM: enumeration des valeurs - ceci permet de transformer u
 
 interface Clients {
 	name: string;
-	attributes: [number, boolean | string]; //<= TUPLE: typage des valeurs possible pour un array
+	attributes: [number, boolean | string]; //<= TUPPLE: typage des valeurs possible pour un array
 	account: number;
 }
 
