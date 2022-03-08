@@ -45,7 +45,7 @@ Animals.fly(15); //Voler -> hauteur: 15 ,vitesse: 20
 
 //------------------------------------------------
 
-//##### REST parameters (valeur libre)
+//##### REST parameters (valeur libre -> array)
 const sum = (...numbers) => {
 	//...numbers sert a transformer toutes les valeurs libres en argument de la fonction en array -> numbers = [1, 5, 7, 3];
 	let sum = 0;
@@ -56,3 +56,16 @@ const sum = (...numbers) => {
 };
 
 console.log(sum(1, 5, 7, 3)); //16
+
+//------------------------------------------------
+
+//##### SPREAD operator  (array -> valeur libre)
+
+const fruitsRed = ['fraise', 'cerise'];
+const fruitsYellow = ['banane', 'ananas'];
+
+const fruitsAll = [...fruitsRed, ...fruitsYellow]; //ceci va creer un nouvel array avec les valeurs de fruitsRed et fruitsYellow
+const fruitsContainer = [fruitsRed, fruitsYellow]; //ceci va creer un nouvel array et un sous array de fruitsRed et fruitsYellow
+
+console.log(fruitsContainer); //[ [ 'fraise', 'cerise' ], [ 'banane', 'ananas' ] ]
+console.log(fruitsAll); //[ 'fraise', 'cerise', 'banane', 'ananas' ]
