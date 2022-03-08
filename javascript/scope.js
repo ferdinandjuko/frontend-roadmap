@@ -5,21 +5,21 @@
 	{
 		//--CHILD1
 		let local = 'alone !';
-		console.log(global); //success
-		console.log(local); //success
+		console.log(global); //done
+		console.log(local); //done
 	}
 
-	console.log(global); //success
-	console.log(local); //erreur
+	console.log(global); //done
+	console.log(local); //error
 }
 
 {
 	//---PARENT2
 	let local = 'alone !'; //ceci est accessible dans enfant2 puisqu'elle est dans parent2
-	console.log(global); //sucess
+	console.log(global); //done
 	{
 		//--CHILD2
-		console.log(global); //sucess
-		console.log(local); //sucess
+		console.log(global); //done
+		console.log(local); //done
 	}
 }
