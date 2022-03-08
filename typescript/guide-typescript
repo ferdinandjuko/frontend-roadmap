@@ -1,0 +1,14 @@
+########################################
+### installation typescript (global) ###
+########################################
+$ sudo npm install -g typescript
+
+---------------------------------------------------
+#######################################
+### commandes basique de typescript ###
+#######################################
+[initialisation] -> $ tsc --init (fichier de configuration TS)
+
+[compilation] -> $ tsc <file.ts> (compilation manuel)
+
+[watch] -> $ tsc -w <file.ts> (compilation auto a chaque enregistrement)
