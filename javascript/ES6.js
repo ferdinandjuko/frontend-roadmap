@@ -8,6 +8,8 @@
 //-- Le HOISTING ne marche qu'avec le VAR, c'est a dire declarer la variable apres son utilisation (n'est pas recommandE)
 //-- REGLE: On utilise plus VAR, toujours utiliser CONST et si sa valeur est reassignE plus tard, on le change en LET
 
+//------------------------------------------------
+
 //##### OBJET
 //-- creation d'un objet
 let obj = { name: 'Rakoto' };
@@ -16,17 +18,27 @@ obj.name = 'Rasoa';
 //-- modification de l'objet - note: si on defini un objet en const, il est impossible de modifier l'objet
 obj = { name: 'Randria', age: 20 };
 
-//##### FONCTION FLECHEE
+//------------------------------------------------
+
+//##### FONCTION FLECHEE (arrow function)
+//note: une fonction est souvent declarEe en const en ES6
+
 //-- fonction anonyme (qui n'a pas de nom)
 arg => arg * 5;
-//-- fonction classic
-const myFunction = arg => arg * 5; //note: une fonction est souvent declarEe en const en ES6
-myFunction(5); //25
-//-- methode d'objet (fly)
+
+//-- arrow function
+const welcome = () => 'Hello'; //0 argument
+welcome(); //Hello
+
+const multiple = arg => arg * 5; //1 seul argument
+multiple(5); //25
+
+//-- methode d'objet (fly) + default arg
 const Animals = {
 	type: 'Bird',
-	fly: function (width, speed) {
+	fly: (width, speed = 50) => {
+		//2 arguments avec un arg par defaut (speed = 50)
 		console.log('Voler -> hauteur: ' + width + ' ,vitesse: ' + speed);
 	},
 };
-Animals.fly(15, 20); //Voler -> hauteur: 15 ,vitesse: 20
+Animals.fly(15); //Voler -> hauteur: 15 ,vitesse: 20
