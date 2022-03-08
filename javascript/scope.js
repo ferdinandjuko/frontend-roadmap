@@ -10,14 +10,13 @@
 	}
 
 	console.log(global); //success
-	console.log(local); //erreur 
+	console.log(local); //erreur
 }
 
 {
 	//---PARENT2
 	let local = 'alone !'; //ceci est accessible dans enfant2 puisqu'elle est dans parent2
 	console.log(global); //sucess
-  
 	{
 		//--ENFANT2
 		console.log(global); //sucess
