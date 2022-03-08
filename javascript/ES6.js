@@ -42,3 +42,17 @@ const Animals = {
 	},
 };
 Animals.fly(15); //Voler -> hauteur: 15 ,vitesse: 20
+
+//------------------------------------------------
+
+//##### REST parameters (valeur libre)
+const sum = (...numbers) => {
+	//...numbers sert a transformer toutes les valeurs libres en argument de la fonction en array -> numbers = [1, 5, 7, 3];
+	let sum = 0;
+	for (let counter = 0; counter < numbers.length; counter++) {
+		sum += numbers[counter];
+	}
+	return sum;
+};
+
+console.log(sum(1, 5, 7, 3)); //16
