@@ -4,3 +4,6 @@ upstream.sh
 .log-server
 upstream.sh
 .log-server
+upstream.sh
+.log-original-repo
+.log-fork-repo
